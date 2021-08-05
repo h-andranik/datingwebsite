@@ -13,6 +13,8 @@ class CreateInterestsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('interests');
+
         Schema::create('interests', function (Blueprint $table) {
             $table->id();
             $table->string('name');
